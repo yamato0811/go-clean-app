@@ -28,3 +28,7 @@ func (h TodoHandler) GetTodos(c *gin.Context) {
 type TodoResponse struct {
 	Todos []domain.Todo `json:"todos"`
 }
+
+func ProvideTodoHandler(todoUseCase usecase.TodoUseCase) *TodoHandler {
+	return &TodoHandler{todoUseCase}
+}

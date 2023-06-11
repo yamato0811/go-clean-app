@@ -1,6 +1,7 @@
 package rest
 
 import (
+	"clean-app/di"
 	"clean-app/rest/handler"
 
 	"github.com/gin-gonic/gin"
@@ -17,7 +18,8 @@ func NewServer() *gin.Engine {
 
 	todos := v1.Group("/todos")
 	{
-		todos.GET("", handler.GetTodos)
+		todosHandler := di.InitTodoHandler()
+		todos.GET("", todosHandler.GetTodos)
 	}
 
 	return r

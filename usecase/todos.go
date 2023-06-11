@@ -18,3 +18,7 @@ func (u TodoUseCase) GetTodos() ([]domain.Todo, error) {
 
 	return todos, nil
 }
+
+func ProvideTodoUsecase(todoPort port.TodoPort) TodoUseCase {
+	return TodoUseCase{todoPort}
+}

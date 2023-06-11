@@ -26,3 +26,7 @@ func (t TodoGateway)GetTodos() ([]domain.Todo, error) {
 	}
 	return todos, nil
 }
+
+func ProvideTodoPort(todoDriver driver.TodoDriver) TodoGateway {
+	return TodoGateway{todoDriver}
+}
