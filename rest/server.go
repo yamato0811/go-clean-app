@@ -15,5 +15,10 @@ func NewServer() *gin.Engine {
 		v1.GET("/system/ping", SystemHandler.Ping)
 	}
 
+	todos := v1.Group("/todos")
+	{
+		todos.GET("", handler.GetTodos)
+	}
+
 	return r
 }
