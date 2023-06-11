@@ -1,7 +1,7 @@
-# Clean Architecture Practice Repository (Gin + Go)
+# Clean Architecture Practice Repository (Gin + Go) 😇
 This repository serves as a practice project for implementing the Clean Architecture using the Gin web framework and the Go programming language. It demonstrates how to structure a web application using the principles of Clean Architecture to achieve separation of concerns and maintainability.
 
-## Architecture Overview
+## Architecture Overview 😎
 The project follows the Clean Architecture principles, which consist of the following layers:
 1. Domain Layer: Contains the core business logic and entities of the application. It should be independent of any external frameworks or libraries.
 2. Use Case Layer: Defines the application-specific use cases or application services. It orchestrates the interactions between the Domain Layer and the Interface Adapters.
@@ -9,7 +9,7 @@ The project follows the Clean Architecture principles, which consist of the foll
 4. Frameworks & Drivers: Contains the external frameworks, libraries, and tools used in the application. In this project, we use the Gin web framework as the HTTP delivery mechanism.
 
 
-## Project Structure
+## Project Structure 🤔
 The repository follows a standard Go project structure with the following directories:
 ```
 .
