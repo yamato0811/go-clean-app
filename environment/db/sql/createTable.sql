@@ -1,8 +1,9 @@
 CREATE DATABASE IF NOT EXISTS gdb;
 USE gdb;
 
-CREATE TABLE IF NOT EXISTS groups (
+CREATE TABLE IF NOT EXISTS todos (
     `id` int(11) NOT NULL AUTO_INCREMENT,
-    `name` varchar(255) NOT NULL,
+    `title` varchar(255) NOT NULL,
+    `completed` tinyint(1) NOT NULL DEFAULT '0',
     PRIMARY KEY (`id`)
 );
